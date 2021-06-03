@@ -1,0 +1,219 @@
+@import "variables";
+@import "basicStyle";
+@import "mixins";
+body {
+  position: relative;
+  min-height: 100vh;
+  &::after {
+    // content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../image.png);
+    background-position: center top;
+    background-size: 100% auto;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+  }
+}
+
+/*------- GLOBAL -------*/
+button {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 20px 40px;
+  margin-top: 10px;
+  background-color: $green;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    background-color: $gray;
+    color: $white;
+  }
+}
+/*---------------------------------*/
+/* topBar */
+.topBar {
+  padding: 10px 0;
+  background-color: $lightgray;
+  article {
+    @include flex($y: center);
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/* nav */
+nav {
+  border-bottom: 5px solid $green;
+  article {
+    width: 95%;
+    margin: 0 auto;
+    @include flex($y: center);
+    padding: 20px 0;
+    .brand {
+      flex: 1;
+      font-size: 2rem;
+      span {
+        color: $green;
+        font-style: italic;
+        text-shadow: $textShadow;
+      }
+    }
+    .navigation {
+      @include flex($x: center);
+      flex: 1;
+
+      li {
+        margin-right: 200px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .icons {
+      @include flex($x: flex-end);
+      flex: 1;
+      li {
+        margin-left: 20px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* header */
+header {
+  &.indexHeader {
+    @include flex(flex-start, center, column);
+    background-image: url(../img/header.jpg);
+    @include bgBasic;
+    height: 87vh;
+  }
+  article {
+    width: 95%;
+    margin: 0 auto;
+    h4 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 4.5rem;
+      text-transform: capitalize;
+      line-height: 1;
+      margin: 5px 0 10px;
+      span {
+        color: $green;
+      }
+    }
+  }
+  &.otherHeader {
+    background-color: $lightgray;
+    text-align: center;
+    padding: 50px 0;
+    h1 {
+      font-size: 3rem;
+      color: $gray;
+    }
+  }
+}
+
+/* featured */
+.featured {
+  h2 {
+    text-align: center;
+    font-size: 3.2rem;
+  }
+  hr {
+    border: none;
+    background-color: $green;
+    margin: 40px auto;
+    height: 1px;
+    width: 200px;
+  }
+  article {
+    @include flex;
+    .wrapper {
+      flex: 0 0 30%;
+      box-shadow: $boxShadow;
+      .text {
+        background-color: $white;
+        padding: 20px;
+        h3 {
+          font-size: 1.7rem;
+        }
+        p {
+          margin-top: 20px;
+          span {
+            color: $blue;
+            text-decoration: line-through;
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+/* footer */
+footer {
+  background-color: $blue;
+  color: $white;
+  article {
+    @include flex;
+    div {
+      flex: 0 0 33%;
+      h2 {
+        font-size: 1.7rem;
+        margin-bottom: 40px;
+      }
+      ul {
+        li {
+          line-height: 2;
+        }
+      }
+      p {
+        line-height: 1.6;
+      }
+    }
+    form {
+      margin-top: 10px;
+      input {
+        padding: 10px 10px;
+        width: 210px;
+      }
+      button {
+        padding: 5px;
+        font-size: 0.9rem;
+        text-transform: none;
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+/* bottomBar */
+.bottomBar {
+  @extend .topBar;
+  background-color: $green;
+  p {
+    text-transform: uppercase;
+  }
+  i {
+    margin-left: 20px;
+  }
+  button {
+    padding: 10px;
+  }
+}
+/* header */
+/* header */
+/* header */
+/* header */
+/* header */
