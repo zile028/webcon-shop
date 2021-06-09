@@ -37,6 +37,9 @@ button {
 /* nav */
 nav {
   border-bottom: 5px solid $green;
+  position: fixed;
+  width: 100%;
+  background-color: $white;
   article {
     width: 95%;
     margin: 0 auto;

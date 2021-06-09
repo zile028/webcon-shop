@@ -123,6 +123,9 @@ button:hover {
 /* nav */
 nav {
   border-bottom: 5px solid #ccf381;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
 }
 
 nav article {
